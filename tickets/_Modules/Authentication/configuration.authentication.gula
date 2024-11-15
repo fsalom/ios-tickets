@@ -1,0 +1,25 @@
+{
+    "shared": [
+        "Gula/Shared/Components/CustomTextField",
+        "Gula/Shared/Components/CustomButtons",
+        "Gula/Shared/Components/Toast",
+        "Gula/Shared/Error",
+        "Gula/Shared/Domain/UseCase/Validation",
+        "Gula/Shared/Presentation/Logout",
+        "Gula/Shared/Resources/Localizable",
+        "Gula/Shared/Configuration"
+    ],
+
+    "libraries": [
+        {
+            "name": "TripleA",
+            "url": "https://github.com/fsalom/TripleA",
+            "version": "2.2.0"
+        },
+        {
+            "name": "GoogleSignIn",
+            "url": "https://github.com/google/GoogleSignIn-iOS",
+            "version": "8.0.0"
+        }
+    ]
+}

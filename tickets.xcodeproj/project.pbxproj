@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C1FE96932CE7BBB3000F122F /* TripleA in Frameworks */ = {isa = PBXBuildFile; productRef = 310F696C17EE33A0D51A0730 /* TripleA */; };
+		C1FE96942CE7BBB3000F122F /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE396D8843E3B2A9EF05DB9 /* GoogleSignIn */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		C1FE96772CE7BB24000F122F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1FE96942CE7BBB3000F122F /* GoogleSignIn in Frameworks */,
+				C1FE96932CE7BBB3000F122F /* TripleA in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 			);
 			name = tickets;
 			packageProductDependencies = (
+				310F696C17EE33A0D51A0730 /* TripleA */,
+				4DE396D8843E3B2A9EF05DB9 /* GoogleSignIn */,
 			);
 			productName = tickets;
 			productReference = C1FE96632CE7BB23000F122F /* tickets.app */;
@@ -134,8 +143,6 @@
 				C1FE96792CE7BB24000F122F /* ticketsTests */,
 			);
 			name = ticketsTests;
-			packageProductDependencies = (
-			);
 			productName = ticketsTests;
 			productReference = C1FE96762CE7BB24000F122F /* ticketsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -157,8 +164,6 @@
 				C1FE96832CE7BB24000F122F /* ticketsUITests */,
 			);
 			name = ticketsUITests;
-			packageProductDependencies = (
-			);
 			productName = ticketsUITests;
 			productReference = C1FE96802CE7BB24000F122F /* ticketsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -195,6 +200,10 @@
 			);
 			mainGroup = C1FE965A2CE7BB23000F122F;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				318222F590688F2912B24AA5 /* XCRemoteSwiftPackageReference "TripleA" */,
+				C43C96DC4A4411FE65427122 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C1FE96642CE7BB23000F122F /* Products */;
 			projectDirPath = "";
@@ -388,7 +397,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = tickets/tickets.entitlements;
+				CODE_SIGN_ENTITLEMENTS = tickets/Resources/tickets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tickets/Preview Content\"";
@@ -427,7 +436,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = tickets/tickets.entitlements;
+				CODE_SIGN_ENTITLEMENTS = tickets/Resources/tickets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tickets/Preview Content\"";
@@ -591,6 +600,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		318222F590688F2912B24AA5 /* XCRemoteSwiftPackageReference "TripleA" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fsalom/TripleA";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+		C43C96DC4A4411FE65427122 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		310F696C17EE33A0D51A0730 /* TripleA */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 318222F590688F2912B24AA5 /* XCRemoteSwiftPackageReference "TripleA" */;
+			productName = TripleA;
+		};
+		4DE396D8843E3B2A9EF05DB9 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C43C96DC4A4411FE65427122 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C1FE965B2CE7BB23000F122F /* Project object */;
 }

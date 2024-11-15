@@ -7,26 +7,16 @@
 
 import SwiftUI
 import SwiftData
+import TripleA
 
 @main
 struct ticketsApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+    @StateObject var authenticator: AuthenticatorSUI = Config.shared.authenticator
 
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
+        var body: some Scene {
+            WindowGroup {
+                AuthSwitcherViewBuilder().build(isSocialLoginActived: true)
+                    .environmentObject(authenticator)
+            }
         }
-    }()
-
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-        .modelContainer(sharedModelContainer)
-    }
 }
