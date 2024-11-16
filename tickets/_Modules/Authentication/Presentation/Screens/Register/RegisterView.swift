@@ -20,15 +20,7 @@ struct RegisterView: View {
             ScrollView {
                 ZStack {
                     VStack {
-                        Text("registerTitle")
-                            .font(.system(size: 18))
-                            .padding(.top, 18)
-                        Image(systemName: "photo.fill")
-                            .resizable()
-                            .frame(width: 83, height: 83)
-                            .foregroundColor(Color.gray)
-                            .clipShape(Circle())
-                            .padding(.top, 24)
+                        
                         VStack(spacing: 16) {
                             CustomTextField(
                                 text: $viewModel.fullName,

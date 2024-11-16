@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		C1FE96932CE7BBB3000F122F /* TripleA in Frameworks */ = {isa = PBXBuildFile; productRef = 310F696C17EE33A0D51A0730 /* TripleA */; };
 		C1FE96942CE7BBB3000F122F /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE396D8843E3B2A9EF05DB9 /* GoogleSignIn */; };
+		C1FE97582CE7C6F5000F122F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C1FE97572CE7C6F5000F122F /* FirebaseAnalytics */; };
+		C1FE975A2CE7C6F5000F122F /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = C1FE97592CE7C6F5000F122F /* FirebaseCrashlytics */; };
+		C1FE975C2CE7C6F5000F122F /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = C1FE975B2CE7C6F5000F122F /* FirebaseMessaging */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +37,22 @@
 		C1FE96802CE7BB24000F122F /* ticketsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ticketsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C1FE97602CE7C874000F122F /* Exceptions for "tickets" folder in "tickets" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C1FE96622CE7BB23000F122F /* tickets */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C1FE96652CE7BB23000F122F /* tickets */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C1FE97602CE7C874000F122F /* Exceptions for "tickets" folder in "tickets" target */,
+			);
 			path = tickets;
 			sourceTree = "<group>";
 		};
@@ -58,7 +74,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1FE96942CE7BBB3000F122F /* GoogleSignIn in Frameworks */,
+				C1FE975A2CE7C6F5000F122F /* FirebaseCrashlytics in Frameworks */,
+				C1FE975C2CE7C6F5000F122F /* FirebaseMessaging in Frameworks */,
 				C1FE96932CE7BBB3000F122F /* TripleA in Frameworks */,
+				C1FE97582CE7C6F5000F122F /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +140,9 @@
 			packageProductDependencies = (
 				310F696C17EE33A0D51A0730 /* TripleA */,
 				4DE396D8843E3B2A9EF05DB9 /* GoogleSignIn */,
+				C1FE97572CE7C6F5000F122F /* FirebaseAnalytics */,
+				C1FE97592CE7C6F5000F122F /* FirebaseCrashlytics */,
+				C1FE975B2CE7C6F5000F122F /* FirebaseMessaging */,
 			);
 			productName = tickets;
 			productReference = C1FE96632CE7BB23000F122F /* tickets.app */;
@@ -203,6 +225,7 @@
 			packageReferences = (
 				318222F590688F2912B24AA5 /* XCRemoteSwiftPackageReference "TripleA" */,
 				C43C96DC4A4411FE65427122 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				C1FE97562CE7C6F5000F122F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C1FE96642CE7BB23000F122F /* Products */;
@@ -405,6 +428,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = tickets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Mi cesta";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -420,7 +446,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.mercatickets.com.tickets;
+				PRODUCT_BUNDLE_IDENTIFIER = app.micestadelacompra.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -444,6 +470,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = tickets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Mi cesta";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -459,7 +488,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.mercatickets.com.tickets;
+				PRODUCT_BUNDLE_IDENTIFIER = app.micestadelacompra.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -610,6 +639,14 @@
 				minimumVersion = 2.2.0;
 			};
 		};
+		C1FE97562CE7C6F5000F122F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.5.0;
+			};
+		};
 		C43C96DC4A4411FE65427122 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -630,6 +667,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C43C96DC4A4411FE65427122 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignIn;
+		};
+		C1FE97572CE7C6F5000F122F /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1FE97562CE7C6F5000F122F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		C1FE97592CE7C6F5000F122F /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1FE97562CE7C6F5000F122F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		C1FE975B2CE7C6F5000F122F /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1FE97562CE7C6F5000F122F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

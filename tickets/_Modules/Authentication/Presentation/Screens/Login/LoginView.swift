@@ -19,12 +19,9 @@ struct LoginView: View {
     var body: some View {
         ZStack {
             VStack {
-                Image(systemName: "photo.fill")
+                Image("logo")
                     .resizable()
                     .frame(width: 83, height: 83)
-                    .foregroundColor(Color.gray)
-                    .clipShape(Circle())
-                    .padding(.top, 24)
                 VStack(spacing: 16) {
                     CustomTextField(text: $viewModel.email,
                                     isFieldValid: $viewModel.uiState.isEmailValid,
@@ -137,16 +134,6 @@ struct LoginView: View {
 //        }
         .navigationBarBackButtonHidden()
         .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                Button {
-                    presentation.wrappedValue.dismiss()
-                } label: {
-                    Image(systemName: "chevron.left")
-                        .resizable()
-                        .frame(maxWidth: 16, maxHeight: 16)
-                        .foregroundColor(.black)
-                }
-            }
             ToolbarItem(placement: .principal) {
                 Text("LogIn")
                     .font(.system(size: 18))
