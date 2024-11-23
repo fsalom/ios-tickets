@@ -37,9 +37,11 @@ struct HomeView: View {
                 }                
             }
 
-        }.listStyle(.plain)
+        }
+        .listStyle(.plain)
         .onAppear() {
             viewModel.getAll()
+            viewModel.checkAndRequestNotificationPermissionIfNecessary()
         }
     }
 }

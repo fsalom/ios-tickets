@@ -11,24 +11,25 @@ struct DetailTicketView: View {
     @StateObject var viewModel: DetailTicketViewModel
 
     var body: some View {
-        ScrollView {
-            HStack {
-                Image(.mercadonaLogo)
-                    .resizable()
-                    .frame(width: 40, height: 40)
-                    .foregroundColor(Color.gray)
-                    .clipShape(Circle())
-                Text(viewModel.uiState.ticket.location ?? " ").font(.footnote)
-                Spacer()
 
+        HStack {
+            Image(.mercadonaLogo)
+                .resizable()
+                .frame(width: 40, height: 40)
+                .foregroundColor(Color.gray)
+                .clipShape(Circle())
+            VStack{
+                Text(viewModel.uiState.ticket.location ?? "").font(.footnote)
+                Text(viewModel.uiState.ticket.dateWithFormat).font(.footnote)
             }
+            Spacer()
+        }
+        Text(viewModel.uiState.ticket.totalWithFormat)
+
+        ScrollView {
             ForEach(viewModel.uiState.ticket.products) { product in
                 HStack {
-                    Text("\(product.quantity)")
-                            .foregroundColor(.white)
-                            .frame(width: 30, height: 30)
-                            .background(Circle().fill(Color.black))
-                    Text(product.name.lowercased())
+                    Text("\(product.quantity) x \(product.name.lowercased())")
                     Spacer()
                     Text("\(product.priceWithFormat)").bold()
                 }

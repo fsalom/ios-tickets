@@ -8,9 +8,9 @@ class DetailTicketViewModel: ObservableObject {
 
     @Published var uiState = UIState()
 
-    private let ticketsUseCase: TicketsUseCase
+    private let ticketsUseCase: TicketsUseCases
 
-    init(ticket: Ticket, ticketsUseCase: TicketsUseCase) {
+    init(ticket: Ticket, ticketsUseCase: TicketsUseCases) {
         self.ticketsUseCase = ticketsUseCase
         self.uiState.ticket = ticket
     }
