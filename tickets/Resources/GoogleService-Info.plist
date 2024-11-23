@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>638725961842-9g2vaq2h3ehrt7ca7b9flblgukgritmg.apps.googleusercontent.com</string>
+	<string>638725961842-j9sp465eunt30s1epeo2rab78aeaf5p5.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.638725961842-9g2vaq2h3ehrt7ca7b9flblgukgritmg</string>
+	<string>com.googleusercontent.apps.638725961842-j9sp465eunt30s1epeo2rab78aeaf5p5</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAnmI30gbkW4OxOcNfdHJRXl-vL_cA7hAk</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>app.micestadelacompra.com</string>
+	<string>com.micestadelacompra.app</string>
 	<key>PROJECT_ID</key>
 	<string>tickets-98774</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:638725961842:ios:ceb6517a8fa12c16d92aeb</string>
+	<string>1:638725961842:ios:f0a20e64636f00c4d92aeb</string>
 </dict>
 </plist>
