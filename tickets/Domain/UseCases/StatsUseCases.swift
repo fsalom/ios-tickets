@@ -1,9 +1,9 @@
-class TicketsUseCases {
+class StatsUseCases {
     // MARK: - Properties
-    var repository: TicketsRepositoryProtocol
+    var repository: StatsRepositoryProtocol
 
     // MARK: - Init
-    init(repository: TicketsRepositoryProtocol) {
+    init(repository: StatsRepositoryProtocol) {
         self.repository = repository
     }
 
