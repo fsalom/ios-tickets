@@ -1,5 +1,5 @@
 {
-  "originHash" : "9d51bc67472559084fda762100cb8fcb7efb8e69e5d6a497a1b83d5a753f757c",
+  "originHash" : "573ddef0b8472e16f32c8641d941858393866627d7ff7b2c7639f6f516e9550c",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -150,8 +150,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/fsalom/TripleA",
       "state" : {
-        "revision" : "d11b5d6e768ca871322f3f904e09275b363a56ec",
-        "version" : "2.2.0"
+        "revision" : "e028cf470104a09b468f79bc3deb998a11c9651f",
+        "version" : "2.2.1"
       }
     }
   ],

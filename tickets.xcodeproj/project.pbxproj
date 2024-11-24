@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C1FE96932CE7BBB3000F122F /* TripleA in Frameworks */ = {isa = PBXBuildFile; productRef = 310F696C17EE33A0D51A0730 /* TripleA */; };
+		C145E8592CF1F79600CE1700 /* TripleA in Frameworks */ = {isa = PBXBuildFile; productRef = C145E8582CF1F79600CE1700 /* TripleA */; };
+		C1585DA72CEA83E300F80A8F /* TripleA in Frameworks */ = {isa = PBXBuildFile; productRef = C1585DA62CEA83E300F80A8F /* TripleA */; };
+		C18510632CEB5A4200842418 /* TripleA in Frameworks */ = {isa = PBXBuildFile; productRef = C18510622CEB5A4200842418 /* TripleA */; };
+		C190C54C2CF1F7D700D9AA07 /* TripleA in Frameworks */ = {isa = PBXBuildFile; productRef = C190C54B2CF1F7D700D9AA07 /* TripleA */; };
 		C1FE96942CE7BBB3000F122F /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE396D8843E3B2A9EF05DB9 /* GoogleSignIn */; };
 		C1FE97582CE7C6F5000F122F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C1FE97572CE7C6F5000F122F /* FirebaseAnalytics */; };
 		C1FE975A2CE7C6F5000F122F /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = C1FE97592CE7C6F5000F122F /* FirebaseCrashlytics */; };
@@ -73,10 +76,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C190C54C2CF1F7D700D9AA07 /* TripleA in Frameworks */,
+				C145E8592CF1F79600CE1700 /* TripleA in Frameworks */,
+				C18510632CEB5A4200842418 /* TripleA in Frameworks */,
 				C1FE96942CE7BBB3000F122F /* GoogleSignIn in Frameworks */,
+				C1585DA72CEA83E300F80A8F /* TripleA in Frameworks */,
 				C1FE975A2CE7C6F5000F122F /* FirebaseCrashlytics in Frameworks */,
 				C1FE975C2CE7C6F5000F122F /* FirebaseMessaging in Frameworks */,
-				C1FE96932CE7BBB3000F122F /* TripleA in Frameworks */,
 				C1FE97582CE7C6F5000F122F /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,11 +144,14 @@
 			);
 			name = tickets;
 			packageProductDependencies = (
-				310F696C17EE33A0D51A0730 /* TripleA */,
 				4DE396D8843E3B2A9EF05DB9 /* GoogleSignIn */,
 				C1FE97572CE7C6F5000F122F /* FirebaseAnalytics */,
 				C1FE97592CE7C6F5000F122F /* FirebaseCrashlytics */,
 				C1FE975B2CE7C6F5000F122F /* FirebaseMessaging */,
+				C1585DA62CEA83E300F80A8F /* TripleA */,
+				C18510622CEB5A4200842418 /* TripleA */,
+				C145E8582CF1F79600CE1700 /* TripleA */,
+				C190C54B2CF1F7D700D9AA07 /* TripleA */,
 			);
 			productName = tickets;
 			productReference = C1FE96632CE7BB23000F122F /* tickets.app */;
@@ -223,9 +232,9 @@
 			mainGroup = C1FE965A2CE7BB23000F122F;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				318222F590688F2912B24AA5 /* XCRemoteSwiftPackageReference "TripleA" */,
 				C43C96DC4A4411FE65427122 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				C1FE97562CE7C6F5000F122F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C190C54A2CF1F7D700D9AA07 /* XCRemoteSwiftPackageReference "TripleA" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C1FE96642CE7BB23000F122F /* Products */;
@@ -420,11 +429,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = tickets/Resources/tickets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tickets/Preview Content\"";
-				DEVELOPMENT_TEAM = X8Z657K235;
+				DEVELOPMENT_TEAM = 3BJD5A7BSQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -441,18 +451,19 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.micestadelacompra.com;
+				PRODUCT_BUNDLE_IDENTIFIER = com.micestadelacompra.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Debug;
@@ -462,11 +473,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = tickets/Resources/tickets.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tickets/Preview Content\"";
-				DEVELOPMENT_TEAM = X8Z657K235;
+				DEVELOPMENT_TEAM = 3BJD5A7BSQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -483,18 +495,19 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = app.micestadelacompra.com;
+				PRODUCT_BUNDLE_IDENTIFIER = com.micestadelacompra.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Release;
@@ -631,12 +644,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		318222F590688F2912B24AA5 /* XCRemoteSwiftPackageReference "TripleA" */ = {
+		C190C54A2CF1F7D700D9AA07 /* XCRemoteSwiftPackageReference "TripleA" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/fsalom/TripleA";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.0;
+				minimumVersion = 2.2.1;
 			};
 		};
 		C1FE97562CE7C6F5000F122F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
@@ -658,15 +671,27 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		310F696C17EE33A0D51A0730 /* TripleA */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 318222F590688F2912B24AA5 /* XCRemoteSwiftPackageReference "TripleA" */;
-			productName = TripleA;
-		};
 		4DE396D8843E3B2A9EF05DB9 /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C43C96DC4A4411FE65427122 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignIn;
+		};
+		C145E8582CF1F79600CE1700 /* TripleA */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TripleA;
+		};
+		C1585DA62CEA83E300F80A8F /* TripleA */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TripleA;
+		};
+		C18510622CEB5A4200842418 /* TripleA */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TripleA;
+		};
+		C190C54B2CF1F7D700D9AA07 /* TripleA */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C190C54A2CF1F7D700D9AA07 /* XCRemoteSwiftPackageReference "TripleA" */;
+			productName = TripleA;
 		};
 		C1FE97572CE7C6F5000F122F /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
