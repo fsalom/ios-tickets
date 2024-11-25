@@ -25,13 +25,13 @@ class AuthRemoteDataSource: AuthRemoteDataSourceProtocol {
     
     func loginWithApple(code: String) async throws {
         let parameters = ["auth_code": code]
-        let endpoint = Endpoint(path: "\(Config.baseURL)api/users/login/apple", httpMethod: .post)
+        let endpoint = Endpoint(path: "\(Config.baseURL)api/v1/auth/apple", httpMethod: .post)
         try await self.network.authenticator?.getNewToken(with: parameters, endpoint: endpoint)
     }
     
     func loginWithGoogle(token: String) async throws {
-        let parameters = ["id_token": token]
-        let endpoint = Endpoint(path: "\(Config.baseURL)api/users/login/google", httpMethod: .post)
+        let parameters = ["id_token": token, "client_id": Config.client_id]
+        let endpoint = Endpoint(path: "\(Config.baseURL)api/v1/auth/google", httpMethod: .post)
         try await self.network.authenticator?.getNewToken(with: parameters, endpoint: endpoint)
     }
     

@@ -12,8 +12,7 @@ struct LoginView: View {
     @ObservedObject var viewModel: LoginViewModel
     @State private var showAlert = false
     @State private var buttonState: ButtonState = .disabled
-    // TODO: Implement when Home Module added
-//    @State private var shouldNavigateToHome = false
+    @State private var shouldNavigateToHome = false
     let isSocialLoginActived: Bool
 
     var body: some View {
@@ -95,8 +94,7 @@ struct LoginView: View {
                 buttonState = areValid ? .normal : .disabled
             }
             .onChange(of: viewModel.uiState.isLoginSuccessful) { _, _ in
-                // TODO: Implement when Home Module added
-//                shouldNavigateToHome = true
+                shouldNavigateToHome = true
             }
             .onChange(of: viewModel.uiState.error) { _, _ in
                 guard let error = viewModel.uiState.error else { return }
@@ -128,10 +126,6 @@ struct LoginView: View {
             }
             .padding(.horizontal,16)
         }
-        // TODO: Implement when Home Module added
-//        .navigationDestination(isPresented: $shouldNavigateToHome) {
-//            HomeBuilder().build(isLogged: Container.isLogged)
-//        }
         .navigationBarBackButtonHidden()
         .toolbar {
             ToolbarItem(placement: .principal) {
