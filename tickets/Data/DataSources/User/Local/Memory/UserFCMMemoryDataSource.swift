@@ -1,0 +1,1 @@
+class UserFCMMemoryDataSource: MemoryDataSource<String> {}
