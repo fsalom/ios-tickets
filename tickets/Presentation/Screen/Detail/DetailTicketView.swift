@@ -1,10 +1,3 @@
-//
-//  DetailTicketView.swift
-//  tickets
-//
-//  Created by Fernando Salom Carratala on 18/11/24.
-//
-
 import SwiftUI
 
 struct DetailTicketView: View {

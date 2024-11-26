@@ -57,15 +57,12 @@ struct HomeView: View {
                 Button(action: {
                     print("Settings tapped")
                 }) {
-                    Image(systemName: "gearshape")
-                }
-            }
-
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button(action: {
-                    print("Profile tapped")
-                }) {
-                    Image(systemName: "person.crop.circle")
+                    Text("FS")
+                        .font(.footnote)
+                        .frame(width: 30, height: 30)
+                        .background(Color.white)
+                        .foregroundStyle(Color.black)
+                        .clipShape(Circle())
                 }
             }
         }
