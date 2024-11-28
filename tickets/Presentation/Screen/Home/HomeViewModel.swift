@@ -2,7 +2,8 @@ import SwiftUI
 
 class HomeViewModel: ObservableObject {
     struct UIState {
-        var tickets = [Ticket]()
+        var ticketsPerMonths = [TicketsPerMonth]()
+        var ticketsOfMonth = [Ticket]()
         var error: AuthError?
     }
 
@@ -24,19 +25,24 @@ class HomeViewModel: ObservableObject {
     }
 
     @MainActor
-    func getAll() {
+    func getTicketsPerMonth() {
         Task {
-                do {
-                    let tickets = try await ticketsUseCase.getAll()
-                    DispatchQueue.main.async {
-                        self.uiState.tickets = tickets
-                    }
-                } catch {
-                    DispatchQueue.main.async {
-                        self.uiState.error = .notVerified
-                    }
+            do {
+                let ticketsPerMonths = try await ticketsUseCase.getTicketsPerMonth()
+                DispatchQueue.main.async {
+                    self.uiState.ticketsPerMonths = ticketsPerMonths
+                    self.uiState.ticketsOfMonth = ticketsPerMonths.first?.tickets ?? []
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    self.uiState.error = .notVerified
                 }
             }
+        }
+    }
+
+    func changeMonth(index: Int) {
+        self.uiState.ticketsOfMonth = self.uiState.ticketsPerMonths[index].tickets
     }
 
     private func updateFCM() {
