@@ -2,7 +2,7 @@ import Charts
 import Foundation
 import SwiftUI
 
-struct ChartExampleView: View {
+struct ChartTicketsExpensesView: View {
     let tickets: [Ticket]
 
     var body: some View {
