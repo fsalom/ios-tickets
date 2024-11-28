@@ -19,4 +19,8 @@ class TicketsRepository: TicketsRepositoryProtocol {
             return tickets
         }
     }
+
+    func getTicketsPerMonth() async throws -> [TicketsPerMonth] {
+        return try await remote.getTicketsPerMonth()
+    }
 }
