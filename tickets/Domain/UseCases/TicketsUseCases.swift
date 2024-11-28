@@ -11,4 +11,8 @@ class TicketsUseCases {
     func getAll() async throws -> [Ticket] {
         try await repository.getAll()
     }
+
+    func getTicketsPerMonth() async throws -> [TicketsPerMonth] {
+        try await repository.getTicketsPerMonth()
+    }
 }
