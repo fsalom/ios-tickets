@@ -1,6 +1,8 @@
 import TripleA
 
 class TicketsRemoteDataSource: TicketsRemoteDataSourceProtocol {
+
+    
     private let network: Network
 
     init(network: Network) {
@@ -13,6 +15,26 @@ class TicketsRemoteDataSource: TicketsRemoteDataSourceProtocol {
                                                     of: TicketDataDTO.self)
 
         return data.toDomain()
+    }
+
+
+    func getTicketsPerMonth() async throws -> [TicketsPerMonth] {
+        let endpoint = Endpoint(path: "https://tickets.rudo.es/api/v1/tickets/by_month", httpMethod: .get)
+        let ticketsPerMonth = try await network.loadAuthorized(this: endpoint,
+                                                    of: [TicketsPerMonthDTO].self)
+
+        return ticketsPerMonth.map { $0.toDomain() }
+    }
+}
+
+fileprivate extension TicketsPerMonthDTO {
+    func toDomain() -> TicketsPerMonth {
+        return TicketsPerMonth(
+            month: self.month,
+            numberOfTickets: self.num_tickets,
+            total: self.total,
+            tickets: self.tickets.map { $0.toDomain()}
+        )
     }
 }
 
