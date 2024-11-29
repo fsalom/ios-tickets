@@ -22,9 +22,17 @@ class HomeViewModel: ObservableObject {
         self.ticketsUseCase = ticketsUseCase
         self.fcmUseCases = fcmUseCases
         self.userUseCases = userUseCases
+
+        NotificationCenter.default.removeObserver(self,
+                                                  name: .ticketReceived,
+                                                  object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(getTicketsPerMonth),
+                                               name: .ticketReceived,
+                                               object: nil)
     }
 
-    @MainActor
+    @objc @MainActor
     func getTicketsPerMonth() {
         Task {
             do {
