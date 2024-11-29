@@ -25,5 +25,19 @@ class AppDelegate: NSObject, UIApplicationDelegate, MessagingDelegate, UNUserNot
         }
     }
 
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print(userInfo)
+        NotificationCenter.default.post(name: .ticketReceived, object: nil)
+    }
 
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                  didReceive response: UNNotificationResponse,
+                                  withCompletionHandler completionHandler: @escaping () -> Void) {
+        let userInfo = response.notification.request.content.userInfo
+
+        print(userInfo)
+        NotificationCenter.default.post(name: .ticketReceived, object: nil)
+
+        completionHandler()
+      }
 }
