@@ -8,7 +8,7 @@ class HomeViewModel: ObservableObject {
     }
 
     let notificationCenter = UNUserNotificationCenter.current()
-
+    private var selectedMonth = 0
     @Published var uiState = UIState()
 
     private let ticketsUseCase: TicketsUseCases
@@ -39,7 +39,7 @@ class HomeViewModel: ObservableObject {
                 let ticketsPerMonths = try await ticketsUseCase.getTicketsPerMonth()
                 DispatchQueue.main.async {
                     self.uiState.ticketsPerMonths = ticketsPerMonths
-                    self.uiState.ticketsOfMonth = ticketsPerMonths.first?.tickets ?? []
+                    self.uiState.ticketsOfMonth = ticketsPerMonths[self.selectedMonth].tickets
                 }
             } catch {
                 DispatchQueue.main.async {
@@ -50,6 +50,7 @@ class HomeViewModel: ObservableObject {
     }
 
     func changeMonth(index: Int) {
+        self.selectedMonth = index
         self.uiState.ticketsOfMonth = self.uiState.ticketsPerMonths[index].tickets
     }
 
