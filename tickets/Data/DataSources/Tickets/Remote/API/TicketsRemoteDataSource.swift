@@ -33,6 +33,7 @@ fileprivate extension TicketsPerMonthDTO {
             month: self.month,
             numberOfTickets: self.num_tickets,
             total: self.total,
+            totalDifferencePreviousMonth: self.total_difference ?? 0.0,
             tickets: self.tickets.map { $0.toDomain()}
         )
     }
