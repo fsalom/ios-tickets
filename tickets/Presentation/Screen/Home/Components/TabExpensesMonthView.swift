@@ -7,10 +7,15 @@ struct TabExpensesMonthView: View {
         HStack {
             VStack {
                 Text(ticketsPerMonth.monthWithFormat)
+                    .font(.footnote)
+                    .fontWeight(.bold)
                 Text(ticketsPerMonth.totalWithFormat)
                     .font(.title)
                     .fontWeight(.bold)
-                ChartTicketsExpensesView(tickets: ticketsPerMonth.tickets)
+                    .padding(.bottom, 16)
+                Text("\(ticketsPerMonth.totalDifferencePreviousMonthWithFormat) respecto al mes anterior")
+                    .font(.footnote)
+                //ChartTicketsExpensesView(tickets: ticketsPerMonth.tickets)
             }
             .frame(maxWidth: .infinity, alignment: .center)
         }
@@ -20,7 +25,7 @@ struct TabExpensesMonthView: View {
         .background(
             RoundedRectangle(cornerRadius: 16.0)
                 .fill(Color.white)
-                .shadow(color: Color.gray.opacity(0.5), radius: 5, x: 0, y: 5)
+                .shadow(color: Color.gray.opacity(0.5), radius: 2, x: 0, y: 0)
         )
         .padding(.horizontal, 16)
         .padding(.bottom, 16)
