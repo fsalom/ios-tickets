@@ -14,7 +14,7 @@ struct AuthSwitcherView: View {
                 }
             case .home:
                 NavigationStack {
-                    HomeViewBuilder().build()
+                    TabbarView()
                 }
         }
     }
