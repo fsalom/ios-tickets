@@ -10,12 +10,12 @@ struct TabbarView: View {
 
             PreviewerBuilder().build()
                 .tabItem {
-                    Label("Search", systemImage: "magnifyingglass")
+                    Label("Cámara", systemImage: "camera")
                 }
 
             ProfileBuilder().build()
                 .tabItem {
-                    Label("Profile", systemImage: "person")
+                    Label("Perfil", systemImage: "person")
                 }
         }
         .accentColor(.black)
