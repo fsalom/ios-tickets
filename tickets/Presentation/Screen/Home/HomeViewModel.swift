@@ -4,11 +4,13 @@ class HomeViewModel: ObservableObject {
     struct UIState {
         var ticketsPerMonths = [TicketsPerMonth]()
         var ticketsOfMonth = [Ticket]()
+        var loading: Bool = true
         var error: AuthError?
     }
 
     let notificationCenter = UNUserNotificationCenter.current()
     private var selectedMonth = 0
+    private var myTicketsPerMonths: [TicketsPerMonth]?
     @Published var uiState = UIState()
 
     private let ticketsUseCase: TicketsUseCases
@@ -40,10 +42,12 @@ class HomeViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     self.uiState.ticketsPerMonths = ticketsPerMonths
                     self.uiState.ticketsOfMonth = ticketsPerMonths[self.selectedMonth].tickets
+                    self.uiState.loading = false
                 }
             } catch {
                 DispatchQueue.main.async {
                     self.uiState.error = .notVerified
+                    self.uiState.loading = false
                 }
             }
         }
