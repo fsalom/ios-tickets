@@ -11,7 +11,6 @@ class DeleteAccountBuilder {
     func build() -> DeleteAccountView {
         let errorHandler = ErrorHandlerManager()
         let network = Config.shared.network
-        let validationUseCase = ValidationUseCase()
 
         let dataSource = AuthRemoteDataSource(network: network)
         let repository = AuthRepository(remoteDataSource: dataSource, errorHandler: errorHandler)
