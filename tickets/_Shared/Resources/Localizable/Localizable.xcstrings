@@ -29,6 +29,12 @@
         }
       }
     },
+    "%@" : {
+
+    },
+    "%@ respecto al mes anterior" : {
+
+    },
     "%@extraPrice" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -47,6 +53,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@€"
+          }
+        }
+      }
+    },
+    "%lld x %@" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld x %2$@"
           }
         }
       }
@@ -352,6 +368,9 @@
     "Book" : {
       "extractionState" : "manual"
     },
+    "Cámara" : {
+
+    },
     "Campo obligatorio" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -394,6 +413,12 @@
           }
         }
       }
+    },
+    "Cantidad" : {
+
+    },
+    "Categoría" : {
+
     },
     "Change email" : {
 
@@ -882,6 +907,9 @@
         }
       }
     },
+    "Escanear" : {
+
+    },
     "estimatedHour" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -929,6 +957,9 @@
     "Fake View" : {
 
     },
+    "Fer" : {
+
+    },
     "forgotPassword" : {
       "localizations" : {
         "es" : {
@@ -938,6 +969,9 @@
           }
         }
       }
+    },
+    "FS" : {
+
     },
     "fullName" : {
       "extractionState" : "manual",
@@ -1008,6 +1042,9 @@
         }
       }
     },
+    "Hola " : {
+
+    },
     "home" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -1018,6 +1055,9 @@
           }
         }
       }
+    },
+    "Home" : {
+
     },
     "iAcceptThe" : {
       "extractionState" : "stale",
@@ -1152,6 +1192,9 @@
           }
         }
       }
+    },
+    "Mercadona" : {
+
     },
     "nameAddress" : {
       "extractionState" : "stale",
@@ -1497,6 +1540,9 @@
           }
         }
       }
+    },
+    "Perfil" : {
+
     },
     "phone" : {
       "extractionState" : "stale",
@@ -2011,6 +2057,9 @@
           }
         }
       }
+    },
+    "Tus gastos siempre al día" : {
+
     },
     "undo" : {
       "extractionState" : "manual",
