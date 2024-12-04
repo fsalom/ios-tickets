@@ -10,7 +10,8 @@
 		C145E8592CF1F79600CE1700 /* TripleA in Frameworks */ = {isa = PBXBuildFile; productRef = C145E8582CF1F79600CE1700 /* TripleA */; };
 		C1585DA72CEA83E300F80A8F /* TripleA in Frameworks */ = {isa = PBXBuildFile; productRef = C1585DA62CEA83E300F80A8F /* TripleA */; };
 		C18510632CEB5A4200842418 /* TripleA in Frameworks */ = {isa = PBXBuildFile; productRef = C18510622CEB5A4200842418 /* TripleA */; };
-		C190C54C2CF1F7D700D9AA07 /* TripleA in Frameworks */ = {isa = PBXBuildFile; productRef = C190C54B2CF1F7D700D9AA07 /* TripleA */; };
+		C192C9B32CFE5E83009B4A72 /* TripleA in Frameworks */ = {isa = PBXBuildFile; productRef = C192C9B22CFE5E83009B4A72 /* TripleA */; };
+		C1B441E12CFF1C090097F529 /* TripleA in Frameworks */ = {isa = PBXBuildFile; productRef = C1B441E02CFF1C090097F529 /* TripleA */; };
 		C1FE96942CE7BBB3000F122F /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE396D8843E3B2A9EF05DB9 /* GoogleSignIn */; };
 		C1FE97582CE7C6F5000F122F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C1FE97572CE7C6F5000F122F /* FirebaseAnalytics */; };
 		C1FE975A2CE7C6F5000F122F /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = C1FE97592CE7C6F5000F122F /* FirebaseCrashlytics */; };
@@ -76,12 +77,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C190C54C2CF1F7D700D9AA07 /* TripleA in Frameworks */,
+				C192C9B32CFE5E83009B4A72 /* TripleA in Frameworks */,
 				C145E8592CF1F79600CE1700 /* TripleA in Frameworks */,
 				C18510632CEB5A4200842418 /* TripleA in Frameworks */,
 				C1FE96942CE7BBB3000F122F /* GoogleSignIn in Frameworks */,
 				C1585DA72CEA83E300F80A8F /* TripleA in Frameworks */,
 				C1FE975A2CE7C6F5000F122F /* FirebaseCrashlytics in Frameworks */,
+				C1B441E12CFF1C090097F529 /* TripleA in Frameworks */,
 				C1FE975C2CE7C6F5000F122F /* FirebaseMessaging in Frameworks */,
 				C1FE97582CE7C6F5000F122F /* FirebaseAnalytics in Frameworks */,
 			);
@@ -151,7 +153,8 @@
 				C1585DA62CEA83E300F80A8F /* TripleA */,
 				C18510622CEB5A4200842418 /* TripleA */,
 				C145E8582CF1F79600CE1700 /* TripleA */,
-				C190C54B2CF1F7D700D9AA07 /* TripleA */,
+				C192C9B22CFE5E83009B4A72 /* TripleA */,
+				C1B441E02CFF1C090097F529 /* TripleA */,
 			);
 			productName = tickets;
 			productReference = C1FE96632CE7BB23000F122F /* tickets.app */;
@@ -234,7 +237,7 @@
 			packageReferences = (
 				C43C96DC4A4411FE65427122 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				C1FE97562CE7C6F5000F122F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				C190C54A2CF1F7D700D9AA07 /* XCRemoteSwiftPackageReference "TripleA" */,
+				C1B441DF2CFF1C090097F529 /* XCRemoteSwiftPackageReference "TripleA" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C1FE96642CE7BB23000F122F /* Products */;
@@ -644,12 +647,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C190C54A2CF1F7D700D9AA07 /* XCRemoteSwiftPackageReference "TripleA" */ = {
+		C1B441DF2CFF1C090097F529 /* XCRemoteSwiftPackageReference "TripleA" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/fsalom/TripleA";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.1;
+				minimumVersion = 2.3.0;
 			};
 		};
 		C1FE97562CE7C6F5000F122F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
@@ -688,9 +691,13 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = TripleA;
 		};
-		C190C54B2CF1F7D700D9AA07 /* TripleA */ = {
+		C192C9B22CFE5E83009B4A72 /* TripleA */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C190C54A2CF1F7D700D9AA07 /* XCRemoteSwiftPackageReference "TripleA" */;
+			productName = TripleA;
+		};
+		C1B441E02CFF1C090097F529 /* TripleA */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1B441DF2CFF1C090097F529 /* XCRemoteSwiftPackageReference "TripleA" */;
 			productName = TripleA;
 		};
 		C1FE97572CE7C6F5000F122F /* FirebaseAnalytics */ = {
