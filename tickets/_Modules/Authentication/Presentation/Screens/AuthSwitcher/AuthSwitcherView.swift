@@ -16,6 +16,8 @@ struct AuthSwitcherView: View {
                 NavigationStack {
                     TabbarView()
                 }
+            case .loading:
+                ProgressView()
         }
     }
 }
