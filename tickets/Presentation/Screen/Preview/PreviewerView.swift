@@ -15,7 +15,7 @@ struct PreviewerView: View {
                     .scaledToFit()
                     .overlay(
                         GeometryReader { reader in
-                            ForEach(viewModel.observations) { observation in
+                            ForEach(viewModel.observations, id: \.id) { observation in
                                 Path { path in
                                     path.move(to: viewModel.calculatePosition(
                                         for: observation.box.topLeft,
@@ -55,5 +55,5 @@ struct PreviewerView: View {
 }
 
 #Preview {
-    PreviewerView(viewModel: PreviewerViewModel())
+    PreviewerBuilder().build()
 }
